@@ -3,46 +3,38 @@ package com.example.questionnaire_api.vo;
 import java.util.List;
 
 import com.example.questionnaire_api.entity.Question;
+import com.example.questionnaire_api.entity.Survey;
 
-public class QuestionResponse {
+public class AddSurveyAndQuestionResponse {
 
-	private Question question;
+	private Survey survey;
 
 	private List<Question> questionList;
 
 	private String message;
-
-	// =================================================
-
-	public QuestionResponse() {
+	
+	public AddSurveyAndQuestionResponse() {
 		super();
 	}
 
-	public QuestionResponse(String message) {
+	public AddSurveyAndQuestionResponse(String message) {
 		super();
 		this.message = message;
 	}
-
-	public QuestionResponse(Question question, String message) {
+	
+	public AddSurveyAndQuestionResponse(Survey survey, List<Question> questionList, String message) {
 		super();
-		this.question = question;
-		this.message = message;
-	}
-
-	public QuestionResponse(List<Question> questionList, String message) {
-		super();
+		this.survey = survey;
 		this.questionList = questionList;
 		this.message = message;
 	}
 
-	// =================================================
-
-	public Question getQuestion() {
-		return question;
+	public Survey getSurvey() {
+		return survey;
 	}
 
-	public void setQuestion(Question question) {
-		this.question = question;
+	public void setSurvey(Survey survey) {
+		this.survey = survey;
 	}
 
 	public List<Question> getQuestionList() {
